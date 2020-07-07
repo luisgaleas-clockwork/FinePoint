@@ -6,8 +6,8 @@
 ```
    1.   git clone the repository
    2.   open in code editor
-   3.     open terminal
-   4.     npm install
+   3.   open terminal
+   4.   npm install
    5.   npm run start
   ```
 
@@ -26,7 +26,7 @@ Authors contributed to all back-end and front-end code to this project.All autho
 | ------ | ------ |
 | Reginald Johnson | [https://github.com/rtjohnson0]|
 | Luis Galeas | [https://github.com/luisgaleas-clockwork |
-| Wendy Deras | [https://github.com/wendyyderas |
+| Lucy Yang | [https://github.com/l-yang-05 |
 
 
 
