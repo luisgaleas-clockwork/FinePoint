@@ -24,9 +24,9 @@ Authors contributed to all back-end and front-end code to this project.All autho
 
 | Name | Github Links |
 | ------ | ------ |
-| Reginald Johnson | [https://github.com/rtjohnson0]|
-| Luis Galeas | [https://github.com/luisgaleas-clockwork |
-| Lucy Yang | [https://github.com/l-yang-05 |
+| Reginald Johnson | https://github.com/rtjohnson0|
+| Luis Galeas | https://github.com/luisgaleas-clockwork |
+| Lucy Yang | https://github.com/l-yang-05 |
 
 
 
