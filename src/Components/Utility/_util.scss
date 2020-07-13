@@ -1,0 +1,70 @@
+//--------------------------------------------------------------------
+// This file is where all out animations, mixins, and variables
+// will be stored to use universally throughout all the SCSS files.
+// Once created in this file you will be able to use in in any file
+// That is imported in the mian.scss file.
+
+// note: If a new animation, mixin, variable is needed to be created.
+//       Do so by putting them in their respected section to keep this
+//       file DRY & Clean. :)
+//---------------------------------------------------------------------
+
+
+//=====================================================================
+// Variables
+//=====================================================================
+
+//;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+// Variables to calc font [Responsive] 
+//;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+$mod_1: 1.2; // mobile
+$mod_2: 1.7; // desktop
+
+$mod_3: .8;//button
+
+$min_width: 320px;
+$max_width: 1200px;
+$min_font: 16px;
+$max_font: 24px;
+//;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+//=====================================================================
+// Mixins - Reusable Styles
+
+//         note: To use these mixings you need to use a @include in the style
+//=====================================================================
+
+@mixin flex-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+//;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+// This is a scss function that makes the font responsive. Below is a link to what I mean.
+// https://css-tricks.com/snippets/css/fluid-typography/#in-sass
+//;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+@function strip-unit($value) {
+    @return $value / ($value * 0 + 1);
+  }
+  
+  @mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
+    $u1: unit($min-vw);
+    $u2: unit($max-vw);
+    $u3: unit($min-font-size);
+    $u4: unit($max-font-size);
+  
+    @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+      & {
+        font-size: $min-font-size;
+        @media screen and (min-width: $min-vw) {
+          font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+        }
+        @media screen and (min-width: $max-vw) {
+          font-size: $max-font-size;
+        }
+      }
+    }
+  }

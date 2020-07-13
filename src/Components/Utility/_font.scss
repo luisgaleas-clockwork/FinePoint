@@ -1,0 +1,56 @@
+// -------------------------------------------------------------------
+// Within this file we are setting the fonts and font-sizes
+// to each element globally as seen bellow.
+
+// note: If there is a specific element font you need to resize.
+//       It would be best to override it by changing the font-size
+//       within the specific class the element is in. Otherwise if you
+//       Choose to change it in this file it will do so universally.
+
+//       If you need to import fonts do so by importing it down bellow
+//       and updating the fonts that are available
+// -------------------------------------------------------------------
+
+// ==================================================================
+// Imported Fonts
+// ==================================================================
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Raleway:wght@700&family=Roboto:ital,wght@1,300&display=swap");
+
+// ==================================================================
+// Available fonts
+// ==================================================================
+
+// font-family: 'Montserrat', sans-serif;
+// font-family: 'Raleway', sans-serif;
+// font-family: 'Roboto', sans-serif;
+
+// ==================================================================
+// Font Styles
+// ==================================================================
+
+h1 {
+    font-family: "Montserrat", sans-serif;
+    color:#f8f8ff;
+    text-shadow: 3px 3px 1px black;
+    font-size: $mod_1 * $mod_1 * $mod_1 * $mod_1 * 1rem;
+    @include fluid-type(
+        $min_width,
+        $max_width,
+        $mod_1 * $mod_1 * $mod_1 * $min_font,
+        $mod_2 * $mod_2 * $mod_2 * $min_font
+    );
+}
+button {
+    padding: 14px 45px;
+    border:none;
+    background:#ff530D;
+    color:#f8f8ff;
+    font-family: 'Raleway', sans-serif;
+    font-size: $mod_1 * $mod_1 * $mod_1 * 1rem;
+    @include fluid-type($min_width, $max_width, $mod_3 * $min_font, $mod_1 * $min_font);
+}
+p {
+    font-family: "Roboto", sans-serif;
+    font-size: $mod_1 * 1rem;
+    @include fluid-type($min_width, $max_width, $mod_1 * $min_font, $mod_2 * $min_font);
+}

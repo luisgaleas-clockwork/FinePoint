@@ -1,0 +1,19 @@
+//-------------------------------------------------------------
+// This is the main SCSS file where all styling files are
+// being imported. This file will then be imported into App.js
+// so that all styles are being used all in one import.
+
+// note: If you need more information there will be more 
+//       information provided within each individual file. 
+
+//       You can also overide and elements globally in this file
+//       Although that is not advised.
+//-------------------------------------------------------------
+
+// =========================
+// Partial Style Imports
+// =========================
+@import './Utility/util';
+@import "./Utility/reset";
+@import './Utility/font';
+@import "./Header/header";
